@@ -151,12 +151,11 @@ footer div a img{
 .clientes-general {
     text-align: center;
     background-color: rgba(215, 222, 225, 0.897);
-    
     border-radius: 20px;
     
 }
 
-.clientes div h2{
+.clientes-general h2{
     padding: 20px;
     font-weight: bold;
     margin-bottom: 0;
@@ -173,19 +172,19 @@ footer div a img{
     padding: 20px;
 }
 
-.clientes div h3{
+.contenedor-clientesitem h3 {
     padding: 10px;
     font-size: 24px;
 }
 
-.clientes div p{
+.contenedor-clientesitem p{
     text-align: center;
     font-size: 18px;
     padding: 0px 40px;
     
 }
 
-.clientes div img{
+.contenedor-clientesitem img{
     border-radius: 10%;
     width: 300px;
 }
@@ -505,7 +504,6 @@ footer div a img{
     }
 
     .nosotras div p{
-        text-align: center;
         padding: 5px 30px 15px 30px;
         font-size: 14px;
     }
@@ -521,9 +519,7 @@ footer div a img{
 @media screen and (max-width:970px) {
 
     .contenedor-clientes {
-        display: grid;
         grid-template-columns: auto;
-        grid-template-rows: auto;
         gap: 16px;
     }  
 
