@@ -3,11 +3,11 @@ footer {
     bottom: 0;
     width: 100%;
     height: 40px;
-    color: white;
+    color: $color-2;
 
     div {
         background-repeat: no-repeat;
-        background-color: black;
+        background-color: $color-1;
         padding: 20px;
         display: flex;
         justify-content: space-around;

@@ -3,7 +3,7 @@ main {
     position: relative;
 
     .hero {
-        background-color: black;
+        background-color: $color-1;
         position: relative;
         padding-top: 56%;
 
@@ -18,8 +18,8 @@ main {
         }
 
         .hero-text {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+            background-color: $color-3;
+            color: $color-2;
             font-weight: bold;
             padding: 75px 100px;
             text-align: center;
@@ -27,12 +27,12 @@ main {
             top: 40%;
 
             h1 {
-                font-size: 36px;
+                font-size: nth($font-size, 2);
                 padding-bottom: 20px;
             }
 
             p {
-                font-size: 18px;
+                font-size: nth($font-size, 6);
             }
         }
     }
@@ -46,7 +46,7 @@ main {
 
         .clientes-general {
             text-align: center;
-            background-color: rgba(215, 222, 225, 0.897);
+            background-color: $color-4;
             border-radius: 20px;
 
             h2 {
@@ -70,12 +70,12 @@ main {
 
                     h3 {
                         padding: 10px;
-                        font-size: 24px;
+                        font-size: nth($font-size, 3);
                     }
 
                     p {
                         text-align: center;
-                        font-size: 18px;
+                        font-size: nth($font-size, 6);
                         padding: 0px 40px;
                     }
                 }
@@ -96,10 +96,10 @@ main {
             text-align: center;
 
             h1 {
-                background-color: rgb(29, 33, 49);
-                color: white;
+                background-color: $color-5;
+                color: $color-2;
                 height: 80px;
-                font-size: 45px;
+                font-size: nth($font-size, 1);
                 font-weight: bolder;
                 padding: 10px;
                 margin: 0px;
@@ -110,24 +110,24 @@ main {
                 justify-content: space-around;
 
                 div {
-                    background-color: rgb(215, 222, 225);
+                    background-color: $color-6;
                     margin: 50px;
                     border-radius: 20px;
                     border: 4px solid #6e6f77a1;
-                    box-shadow: 11px 15px 56px -29px rgba(15, 46, 130, 0.64);
-                    -webkit-box-shadow: 11px 15px 56px -29px rgba(15, 46, 130, 0.64);
-                    -moz-box-shadow: 11px 15px 56px -29px rgba(15, 46, 130, 0.64);
+                    box-shadow: 11px 15px 56px -29px $color-7;
+                    -webkit-box-shadow: 11px 15px 56px -29px $color-7;
+                    -moz-box-shadow: 11px 15px 56px -29px $color-7;
 
                     h2 {
                         padding: 30px;
                         text-align: center;
-                        font-size: 24px;
+                        font-size: nth($font-size, 3);
                     }
 
                     p {
                         text-align: center;
                         padding: 5px 60px 30px 60px;
-                        font-size: 16px;
+                        font-size: nth($font-size, 7);
                     }
                 }
             }
@@ -137,7 +137,7 @@ main {
             h2 {
                 font-style: italic;
                 background-color: rgb(55, 58, 78);
-                color: white;
+                color: $color-2;
                 margin-bottom: 0;
             }
         }
@@ -149,10 +149,10 @@ main {
         margin-bottom: 40px;
 
         h1 {
-            background-color: rgb(29, 33, 49);
-            color: white;
+            background-color: $color-5;
+            color: $color-2;
             height: 80px;
-            font-size: 45px;
+            font-size: nth($font-size, 1);
             font-weight: bolder;
             padding: 10px;
             margin: 0px;
@@ -165,11 +165,11 @@ main {
             grid-auto-rows: auto;
             gap: 20px;
             padding: 20px;
-            background-color: rgb(215, 222, 225);
+            background-color: $color-6;
             margin-bottom: 30px;
 
             .contenedor-servicios-item {
-                background-color: white;
+                background-color: $color-2;
                 text-align: center;
                 padding-bottom: 20px;
 
@@ -187,7 +187,7 @@ main {
                     padding-bottom: 10px;
 
                     h2 {
-                        font-size: 22px;
+                        font-size: nth($font-size, 4);
 
                     }
 
@@ -200,7 +200,7 @@ main {
 
         a {
             padding: 10px 20px;
-            font-size: 18px;
+            font-size: nth($font-size, 6);
             background-color: rgb(36, 26, 71);
             color: rgb(248, 246, 246);
             border-radius: 10px;
@@ -214,10 +214,10 @@ main {
 
         div {
             h1 {
-                background-color: rgb(29, 33, 49);
-                color: white;
+                background-color: $color-5;
+                color: $color-2;
                 height: 80px;
-                font-size: 45px;
+                font-size: nth($font-size, 1);
                 font-weight: bolder;
                 padding: 10px;
                 margin: 0px;
@@ -239,10 +239,10 @@ main {
 
         div {
             h1 {
-                background-color: rgb(29, 33, 49);
-                color: white;
+                background-color: $color-5;
+                color: $color-2;
                 height: 80px;
-                font-size: 45px;
+                font-size: nth($font-size, 1);
                 font-weight: bolder;
                 padding: 10px;
                 margin: 0px;
@@ -256,9 +256,7 @@ main {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %center;
 
         form {
             background-color: rgb(252, 248, 244);
@@ -271,15 +269,28 @@ main {
 
             div {
                 margin: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @extend %center;
 
                 input {
                     padding: 5px;
                     margin: 10px;
 
                 }
+            }
+
+            .boton {
+                input {
+                    border-radius: 5px;
+                    height: 40px;
+                    text-align: center;
+                    font-size: medium;
+                    font-weight: bold;
+                    color: rgb(105, 100, 100);
+                    background-color: $color-6;
+                    padding: 5px;
+                    margin: 20px;
+                }
+
             }
         }
 

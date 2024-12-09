@@ -1,0 +1,26 @@
+/*VARIABLE*/
+$color-1: black;
+$color-2: white;
+$color-3: rgba(0, 0, 0, 0.5);
+$color-4: rgba(215, 222, 225, 0.897);
+$color-5: rgb(29, 33, 49);
+$color-6: rgb(215, 222, 225);
+$color-7: rgba(15, 46, 130, 0.64);
+
+/*LISTA*/
+$font-size: 45px, 36px, 24px, 22px, 20px, 18px, 16px, 14px;
+
+/*EXTEND*/
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MIXIN*/
+@mixin flex ($flex, $direction, $justify, $align) {
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

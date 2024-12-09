@@ -1,0 +1,254 @@
+@media screen and (max-width:2375px) {
+    main .hero .hero-text {
+        padding: 50px;
+        position: absolute;
+        top: 38%;
+    }
+}
+
+@media screen and (max-width:1620px) {
+    main .servicios .contenedor-servicios {
+        grid-template-columns: 1fr;
+        grid-auto-rows: repeat(5 1fr);
+    }
+
+    main .servicios .contenedor-servicios .contenedor-servicios-item {
+        padding-bottom: 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    main .servicios .contenedor-servicios .contenedor-servicios-item div {
+        padding: 50px;
+    }
+
+    main .servicios .contenedor-servicios .contenedor-servicios-item img {
+        margin: 20px;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:1550px) {
+    main .hero .hero-text {
+        position: absolute;
+        top: 32%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    main .hero .hero-text {
+        position: absolute;
+        top: 26%;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    main .clientes {
+        padding: 5px;
+    }
+
+    main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem img {
+        width: 80%;
+    }
+
+    main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem p {
+        padding: 0px 10px;
+    }
+
+
+    main .hero .hero-text {
+        position: absolute;
+        top: 21%;
+    }
+
+
+    main .somos div .nosotras div {
+        margin: 30px;
+
+    }
+
+    main .somos div .nosotras div h2 {
+        padding: 10px;
+        font-size: nth($font-size, 6);
+
+        main .somos div .nosotras div p {
+            padding: 5px 30px 15px 30px;
+            font-size: nth($font-size, 8);
+        }
+
+        main .somos .aptitudes h2 {
+            font-size: nth($font-size, 5);
+        }
+    }
+
+
+    @media screen and (max-width:970px) {
+
+        main .clientes .clientes-general .contenedor-clientes {
+            grid-template-columns: auto;
+            gap: 16px;
+        }
+
+        main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem img {
+            width: 50%;
+        }
+
+        main .hero .hero-text h1 {
+            font-size: nth($font-size, 3);
+            padding-bottom: 10px;
+        }
+
+        main .hero .hero-text p {
+            font-size: nth($font-size, 7);
+        }
+
+        main .hero .hero-text {
+            font-weight: 500;
+            padding: 30px;
+            top: 22%;
+        }
+
+    }
+
+    @media screen and (max-width:790px) {
+        main .hero .hero-text {
+            font-weight: 300;
+            padding: 20px;
+            top: 20%;
+        }
+
+        .main .somos div .nosotras {
+            flex-direction: column;
+        }
+
+
+        main .somos div .nosotras div {
+            margin: 15px;
+
+        }
+
+        main .somos div .nosotras div p {
+            padding: 5px 15px 15px 15px;
+
+        }
+
+        main .somos .aptitudes h2 {
+            padding: 5px 10px;
+        }
+
+
+        main .carousel-proyectos {
+            padding: 5% 10%;
+
+        }
+
+
+
+    }
+
+    @media screen and (max-width:690px) {
+        main .hero .hero-text {
+            font-weight: 300;
+            padding: 15px;
+            top: 16%;
+        }
+
+        main .somos .img-somos {
+            height: 300px;
+        }
+
+    }
+
+    @media screen and (max-width:660px) {
+        main .hero .hero-text {
+            padding: 15px;
+            top: 12%;
+
+        }
+
+        main .servicios .contenedor-servicios .contenedor-servicios-item {
+            @include flex (flex, column, space-around, center)
+        }
+
+        main .servicios .contenedor-servicios .contenedor-servicios-item div {
+            padding: 20px;
+        }
+
+        main .servicios .contenedor-servicios .contenedor-servicios-item img {
+            margin: 10px;
+            width: 30%;
+        }
+
+        main .formulario {
+            height: 60vh;
+        }
+
+    }
+
+
+    @media screen and (max-width:610px) {
+        main .clientes {
+            padding: 10px;
+            padding-bottom: 20px;
+        }
+
+        main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem img {
+            width: 50%;
+        }
+
+        main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem p {
+            padding: 0px 10px;
+        }
+
+        main .hero .hero-text {
+            top: 6%;
+
+        }
+    }
+
+    @media screen and (max-width:540px) {
+
+        main .hero .hero-video iframe {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        main .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        main .hero .hero-video {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            order: 0;
+        }
+
+        main .hero .hero-text {
+            position: relative;
+            order: 1;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        main .somos .img-somos {
+            height: 200px;
+        }
+
+        main .formulario form div {
+            @include flex (flex, column, space-around, center)
+        }
+
+        main .formulario form div input {
+            width: 150px;
+        }
+
+
+    }
+}
