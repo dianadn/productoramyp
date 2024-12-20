@@ -16,6 +16,12 @@ footer {
             img {
                 height: 50px;
                 width: 50px;
+                transition: 1s;
+
+            }
+
+            &:hover {
+                transform: scale(1.2);
             }
         }
     }

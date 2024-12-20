@@ -66,6 +66,8 @@ main {
                     img {
                         border-radius: 10%;
                         width: 300px;
+                        transition: width 1s;
+                        transition-timing-function: ease;
                     }
 
                     h3 {
@@ -78,6 +80,21 @@ main {
                         font-size: nth($font-size, 6);
                         padding: 0px 40px;
                     }
+
+                    &:hover {
+                        img {
+                            width: 350px;
+                        }
+
+                        h3 {
+                            font-weight: bolder;
+
+                        }
+
+                        p {
+                            font-weight: bold;
+                        }
+                    }
                 }
             }
         }
@@ -85,7 +102,7 @@ main {
 
     .somos {
         .img-somos {
-            height: 550px;
+            height: 450px;
             background-image: url("../img/varias/somos2.jpg");
             background-position: center;
             background-repeat: no-repeat;
@@ -103,31 +120,55 @@ main {
                 font-weight: bolder;
                 padding: 10px;
                 margin: 0px;
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
             }
 
             .nosotras {
                 display: flex;
+                align-items: center;
                 justify-content: space-around;
 
                 div {
                     background-color: $color-6;
-                    margin: 50px;
+                    margin: 20px;
                     border-radius: 20px;
-                    border: 4px solid #6e6f77a1;
+                    border: 2px solid #6e6f77a1;
                     box-shadow: 11px 15px 56px -29px $color-7;
                     -webkit-box-shadow: 11px 15px 56px -29px $color-7;
                     -moz-box-shadow: 11px 15px 56px -29px $color-7;
+                    animation: nosotras 2s ease-in;
+
+                    @keyframes nosotras {
+                        from {
+                            opacity: 0%;
+                        }
+
+                        to {
+                            opacity: 100%;
+
+                        }
+                    }
 
                     h2 {
-                        padding: 30px;
+                        padding: 20px;
                         text-align: center;
-                        font-size: nth($font-size, 3);
+                        font-size: nth($font-size, 2);
+                        transition: 2s;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
                     }
 
                     p {
                         text-align: center;
                         padding: 5px 60px 30px 60px;
-                        font-size: nth($font-size, 7);
+                        font-size: nth($font-size, 5);
                     }
                 }
             }
@@ -136,9 +177,16 @@ main {
         .aptitudes {
             h2 {
                 font-style: italic;
+                font-weight: 400;
                 background-color: rgb(55, 58, 78);
                 color: $color-2;
                 margin-bottom: 0;
+                transition: 1s;
+
+                &:hover {
+                    background-color: rgb(39, 1, 1);
+                    font-weight: 600;
+                }
             }
         }
 
@@ -156,6 +204,11 @@ main {
             font-weight: bolder;
             padding: 10px;
             margin: 0px;
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
 
         }
 
@@ -182,7 +235,7 @@ main {
                 }
 
                 div {
-                    padding: 15px 20px;
+                    padding: 15px;
                     width: 100%;
                     padding-bottom: 10px;
 
@@ -222,6 +275,11 @@ main {
                 padding: 10px;
                 margin: 0px;
                 position: relative;
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }
@@ -231,7 +289,35 @@ main {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 10% 20%;
+        @extend %center;
+
+
+
+
+        .fondo-proyectos {
+            background-color: $color-3;
+            padding: 50px;
+            margin: 50px;
+            box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.71);
+            -webkit-box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.71);
+            @include flex(flex, column, space-around, center);
+
+            h2 {
+                color: white;
+                font-weight: bold;
+                padding-bottom: 30px;
+                text-align: center;
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+
+
     }
 
     .contacto {
@@ -246,12 +332,16 @@ main {
                 font-weight: bolder;
                 padding: 10px;
                 margin: 0px;
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }
 
     .formulario {
-        height: 50vh;
         background-image: url(../img/varias/buzones.jpg);
         background-position: center;
         background-repeat: no-repeat;
@@ -259,39 +349,139 @@ main {
         @extend %center;
 
         form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             background-color: rgb(252, 248, 244);
             opacity: 0.9;
-            height: auto;
             width: 80%;
             padding: 10px;
-            align-items: center;
             border-radius: 10px;
+            margin: 20px;
+            animation: slide-right 1s ease-in reverse both;
 
-            div {
-                margin: 10px;
-                @extend %center;
+            @keyframes slide-right {
+                from {
+                    transform: translateX(0);
+                }
 
-                input {
-                    padding: 5px;
-                    margin: 10px;
-
+                to {
+                    transform: translateX(1000px);
                 }
             }
 
-            .boton {
-                input {
-                    border-radius: 5px;
-                    height: 40px;
-                    text-align: center;
-                    font-size: medium;
+            .form-container-item {
+                text-align: left;
+                padding: 10px 20px;
+
+
+                h2 {
+                    margin-top: 15px;
                     font-weight: bold;
-                    color: rgb(105, 100, 100);
-                    background-color: $color-6;
-                    padding: 5px;
-                    margin: 20px;
+                    padding: 10px;
                 }
 
+                h3 {
+                    font-weight: 500;
+                    padding: 10px;
+                }
+
+                p {
+                    font-size: large;
+                    font-weight: 500;
+                    padding: 10px;
+
+                    span {
+                        font-weight: bold;
+                        font-size: larger;
+                    }
+                }
+
+                .info-contacto {
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+
+
+
+
+                    div {
+                        height: 35px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+
+
+
+                        img {
+                            width: 20px;
+                            margin-bottom: 20px;
+
+                        }
+
+                        p {
+                            font-weight: 200;
+                            color: rgb(18, 0, 121);
+
+                        }
+                    }
+                }
+
+
+                .input-form {
+
+
+                    div {
+                        margin: 10px;
+                        @extend %center;
+                        justify-content: space-around;
+
+                        input {
+                            padding: 5px;
+                            margin: 10px;
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            border-radius: 10px;
+                            color: gray;
+                            margin: 10px;
+
+
+
+                        }
+                    }
+
+
+                    .boton {
+                        input {
+                            border-radius: 10px;
+                            height: 40px;
+                            width: 100%;
+                            text-align: center;
+                            font-size: medium;
+                            font-weight: bold;
+                            color: rgb(255, 255, 255);
+                            background-color: $color-7;
+                            padding: 5px;
+                            margin: 10px;
+
+                            &:hover {
+                                background-color: rgb(10, 2, 56);
+                                font-weight: bolder;
+                            }
+                        }
+
+                    }
+                }
             }
+
+
+
+
         }
 
     }
