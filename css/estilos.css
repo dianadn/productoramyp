@@ -108,8 +108,13 @@ main .clientes .clientes-general {
 }
 main .clientes .clientes-general h2 {
   padding: 20px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0;
+  transition: 1s;
+}
+main .clientes .clientes-general h2:hover {
+  font-weight: bolder;
+  font-size: 36px;
 }
 main .clientes .clientes-general .contenedor-clientes {
   display: grid;
@@ -122,11 +127,11 @@ main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem {
 main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem img {
   border-radius: 10%;
   width: 300px;
-  transition: width 1s;
+  transition: 1s;
   transition-timing-function: ease;
 }
 main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem h3 {
-  padding: 10px;
+  padding: 20px 10px;
   font-size: 24px;
 }
 main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem p {
@@ -135,10 +140,11 @@ main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem p
   padding: 0px 40px;
 }
 main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem:hover img {
-  width: 350px;
+  transform: scale(1.1);
 }
 main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem:hover h3 {
   font-weight: bolder;
+  padding-top: 2em;
 }
 main .clientes .clientes-general .contenedor-clientes .contenedor-clientesitem:hover p {
   font-weight: bold;
